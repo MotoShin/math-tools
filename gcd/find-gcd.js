@@ -6,7 +6,7 @@ var app = new Vue({
         gcd: 'find G.C.D.!'
     },
     methods: {
-        findGcg: function () {
+        findGcd: function () {
             let r = this.x % this.y;
             let a = this.x;
             let b = this.y;
