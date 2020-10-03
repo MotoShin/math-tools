@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>MathTools</title>
-</head>
+<html lnag="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>MathTools</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
 
-<body>
-<main>
-  <h1>最大公約数</h1>
-  <textarea name="x" rows="10"></textarea>
-  <textarea name="y" rows="10"></textarea>
-</main>
-</body>
+  <body>
+    <div id='find-gcd'>
+      <h2>最大公約数</h2>
+      <p>
+        x: <input type="text" rows="10" v-model.number="x">
+        <br>
+        y: <input type="text" rows="10" v-model.number="y">
+        <br>
+        x と y の最大公約数: {{ gcd }}
+      </p>
+      <button v-on:click="findGcg">計算！</button>
+    </div>
+    <script src="gcd/find-gcd.js"></script>
+  </body>
 </html>
